@@ -1,24 +1,25 @@
-const prozEduc = [
-{
-    titulo: "Primeira Lista",
-    menu: <li>"01"</li>;<li>"02"</li>;<li>"03"</li>,
-    link: "www.facebook.com",
-    lista: <li href="www.facebook.com"></li>;<li href="www.instagram.com"></li>;<li href="www.linkedin.com"></li>
-},
-]
+let titulo = document.getElementById('titulo')
+let link = document.querySelector('a');
 
-for(let i = 0; i < prozEduc.length; i++){
+titulo.innerText = 'Menu'
+link.innerText = 'Redes Sociais'
 
-    let main = document.createElement("main")
+let listaMenu = document.querySelector('ul')
+let listaOrdenada = document.querySelector('ol')
 
-    main.id = `post-${i+1}`
+listaMenu.innerHTML = `
+    <li>Home</li>
+    <li>Sobre</li>
+    <li>Cursos</li>
+`
+listaOrdenada.innerHTML = `
+    <li><a href="www.facebook.com">Facebook</a></li>
+    <li><a href="www.instagram.com">Instagram</a></li>
+    <li><a href="www.youtube.com">Youtube</a></li>
+`
 
-    main.innerHTML =`
-    <h1>${prozEduc[i].titulo}</h1>
-    <ul>${prozEduc[i].menu}</ul>
-    <a>${prozEduc[i].link}</a>
-    <ol>${prozEduc[i].lista}</ol>
-    `
+// Crie um projeto com dois arquivos: index.html e script.js. 
 
-    let body = document.querySelector("body")
-    body.appendChild(main)
+// No arquivo 'index' insira a estrutura base HTML e dentro da tag 'body' inclua quatro tags vazias: h1, ul, a, ol. Adicione o atributo id="titulo" à tag h1, o atributo href="https://prozeducacao.com.br" à tag 'a', e o atributo id="lista-ordenada" à tag 'ol'. Na sequência, realize a conexão entre o arquivo HTML e o arquivo JavaScript.
+
+// No arquivo script.js capture os quatro elementos criados, e use a propriedade .innerText para adicionar conteúdo textual aos elementos 'h1' e 'a', e a propriedade .innerHTML para adicionar três itens simples na lista não ordenada, e três itens com links para outros sites na lista ordenada. 
